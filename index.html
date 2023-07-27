@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Login page </title>
+	<style type="text/css">
+		*{
+			border: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+/* body section */
+
+		body{
+			background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("header-image.png");
+			position: center;
+			
+		}
+
+/* middle */
+
+		.middle{
+			height: 70vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+/* container section */		
+
+		.container{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			width: 300px;
+			padding: 20px;
+			border-radius: 5px;
+		}
+		
+/* input tag */
+
+		input{
+			margin: 5px 0;
+			height: 35px;
+			padding: 7px;
+			border: 0;
+			outline: 0;
+			border-radius: 5px;
+		}
+
+/* button tag */
+
+		button{
+			height: 35px;
+			width: 100px;
+			margin: 5px 0;
+			background-color: skyblue;
+			border-radius: 5px;
+			border: none;
+			color: white;
+		}
+		button:hover{
+			background-color: blue;
+			color: skyblue;
+		}
+
+/* header section */
+
+		.header{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 10px 30px;
+			cursor: pointer;
+		}
+		 .header button{
+			color: white;
+			background-color: red;
+			border: 0;
+			border-radius: 4px;
+			font-size: 15px;
+			cursor: pointer;	
+		}
+
+/* logo img */
+
+		.header span img{
+			height: 30px;
+			width: auto;
+		}
+
+/* login tag */
+
+		.login{
+			font-size: 50px;
+			color: white;
+			margin-bottom: 20px;
+			cursor: pointer;
+		}
+
+/*remember tag */
+
+		.remember{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+			
+		}
+		.remember div{
+			padding: 10px;
+			color: white;
+
+		}
+	</style>
+<!-- end of css style -->
+
+<!-- java script for email and password verificatio -->
+
+	<script type="text/javascript">
+		function fun()
+       {
+          var a=document.getElementById("Mail").value;
+          var b=document.getElementById("Password").value;
+          var c= /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+          var d=2;
+          if (a.match(c) )
+           {}
+           else{
+           			d=d-1
+                   window.alert("mail is not correct");
+                }
+             if (b.length>4)
+              {}
+              	  else{
+              	  	d=d-1
+                  window.alert("password is not correct");
+               }
+          if (d==2) {
+
+/* change the hyper link with your file location
+place your website link in place of netflix-main-page.html*/
+          	
+				window.location = "netflix-main-page.html"
+          }
+        } 
+
+	</script>
+</head>
+<body>
+	<div class="header">
+		<span><img src="logo.png"></span>
+		<button>Sign up</button>
+	</div> 
+	<div class="middle">
+		<div class="container">
+			<div class="login">Login</div>
+				<input id="Mail" type="email" placeholder="Email">
+				<input id="Password" type="password" placeholder="Password">
+			<div class="remember">
+				<input type="checkbox">
+				<div>Remeber me</div>
+			</div>
+           	<button onclick="fun()"> Login </button>
+		</div>
+	</div>
+</body>
+</html>
